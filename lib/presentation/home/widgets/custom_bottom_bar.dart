@@ -28,20 +28,22 @@ class CustomBottomBar extends StatelessWidget {
           label: 'Home',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.map_outlined),
-          label: 'Discover',
+          icon: Icon(Icons.search),
+          label: 'Search',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.shopping_cart_checkout_outlined),
-          label: 'Perfil',
+          label: 'Cart',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person_2_outlined),
-          label: 'Carrito',
+          label: 'Profile',
         ),
       ],
       currentIndex: currentIndex,
       onTap: (value) => onItemTapped(context, value),
+      showSelectedLabels: true,  
+      showUnselectedLabels: false,
     );
   }
 }
