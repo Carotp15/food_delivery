@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/utils/colors.dart';
 import 'package:go_router/go_router.dart';
@@ -17,31 +18,39 @@ class CustomBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      backgroundColor: Colors.grey.shade900,
-      selectedItemColor: Colors.orange,
-      unselectedItemColor: AppColors.tertiaryColor.withOpacity(0.8),
-      selectedFontSize: 0,
-      unselectedFontSize: 0,
-      items: const [
+      showUnselectedLabels: false,  // Ocultar etiquetas no seleccionadas
+      showSelectedLabels: false,    // Ocultar etiquetas seleccionadas
+      elevation: 0,
+      backgroundColor: AppColors.backgroundScreens,
+      unselectedItemColor: Colors.grey.shade500,
+      selectedItemColor: AppColors.primaryColor,
+      iconSize: 25,  // Reducir el tamaño de los iconos
+      items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.home_outlined),
-          label: 'Home',
+          icon: Icon(currentIndex == 0 ? CupertinoIcons.house_fill : CupertinoIcons.house),
+          label: 'home',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.map_outlined),
-          label: 'Discover',
+          icon: Icon(currentIndex == 1 ? CupertinoIcons.suit_heart_fill : CupertinoIcons.suit_heart),
+          label: 'favourite',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart_checkout_outlined),
-          label: 'Carrito',
+          icon: Icon(currentIndex == 2 ? CupertinoIcons.cart_fill : CupertinoIcons.cart),
+          label: 'cart',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.person_2_outlined),
-          label: 'Perfil',
+          icon: Icon(currentIndex == 3 ? CupertinoIcons.person_fill : CupertinoIcons.person),
+          label: 'profile',
         ),
       ],
       currentIndex: currentIndex,
       onTap: (value) => onItemTapped(context, value),
+      selectedFontSize: 0,  // Tamaño de fuente para el ítem seleccionado
+      unselectedFontSize: 0,  // Tamaño de fuente para ítems no seleccionados
+      type: BottomNavigationBarType.fixed,  // Asegura que todos los ítems mantengan su posición
     );
   }
 }
+
+
+ 
