@@ -32,23 +32,33 @@ final router = GoRouter(
         // Use Consumer or ConsumerWidget to access Riverpod's providers
         return Consumer(
           builder: (context, ref, child) {
-            final cartNotifier = ref.read(cartProvider.notifier); // Access the CartNotifier
+            final cartNotifier =
+                ref.read(cartProvider.notifier); // Access the CartNotifier
 
             return ProductDetailScreen(
               item: item,
               addToCart: (ItemModel currentItem) {
-                cartNotifier.addToCart(currentItem); // Pass addToCart function to ProductDetailScreen
+                cartNotifier.addToCart(
+                    currentItem); // Pass addToCart function to ProductDetailScreen
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(content: Text('${currentItem.name} added to cart')),
+                );
+              },
             );
           },
         );
       },
-    );
-  },
-),
-
+    ),
+    GoRoute(
+      name: 'login',
+      path: '/login',
+      builder: (context, state) => const LoginScreen(),
+    ),
+    GoRoute(
+        name: 'register',
+        path: '/register',
+        builder: (context, state) => const RegisterScreen(),
+        widget),
     GoRoute(path: '/', redirect: (_, __) => '/home/0'),
   ],
 );
-

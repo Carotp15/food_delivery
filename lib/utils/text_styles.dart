@@ -112,5 +112,11 @@ class AppTextStyles {
     fontFamily: 'Gilroy',
     color: AppColors.primaryColor,
   );
-  
+
+  static const TextStyle mediumDarkGrey = TextStyle(
+    fontSize: 16.0,
+    fontWeight: FontWeight.normal,
+    fontFamily: 'Gilroy',
+    color: Color.fromARGB(255, 68, 68, 68),
+  ); 
 }
