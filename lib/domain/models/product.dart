@@ -32,3 +32,4 @@ class Product {
   firstWhere(bool Function(dynamic product) param0,
       {required Never Function() orElse}) {}
 }
+

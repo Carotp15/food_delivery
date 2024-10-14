@@ -1,48 +1,43 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:food_delivery/presentation/profile/widgets/profile_bar.dart';
+import 'package:food_delivery/utils/colors.dart';
+import 'widgets/title_with_text_button.dart';
+import 'widgets/profile_card_widget.dart';
 
-class ProfileScreen extends ConsumerWidget {
+class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Container(
-      color: Colors.black,
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 20.0),
-            child: Center(
-              child: Image.asset(
-                'assets/images/profile.png',
-                width: 150,
-                height: 150,
-              ),
-            ),
-          ),
-          const SizedBox(height: 20),
-          const Text(
-            'Bienvenido a tu perfil',
-            style: TextStyle(fontSize: 24, color: Colors.white),
-          ),
-          const SizedBox(height: 30),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: AppColors.backgroundScreens,
+        appBar: const ProfileAppBar(),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: ListView(
+            physics: const BouncingScrollPhysics(),
             children: [
-              const Icon(Icons.person, size: 24, color: Colors.white),
-              const SizedBox(width: 8),
-              Text(
-                'Usuario: Sebastián Muñoz',
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyLarge
-                    ?.copyWith(color: Colors.white),
+              Column(
+                children: [
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  TitleWithTextButton(
+                    buttonText: 'Change',
+                    title: 'Personal Details',
+                    onPressed: () {},
+                  ),
+                  const SizedBox(
+                    height: 180,
+                    width: double.infinity,
+                    child: ProfileCardWidget(),
+                  ),
+                ],
               ),
             ],
           ),
-          const Divider(color: Colors.white),
-          const SizedBox(height: 10),
-        ],
+        ),
       ),
     );
   }
