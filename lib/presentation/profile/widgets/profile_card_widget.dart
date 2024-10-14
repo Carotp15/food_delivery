@@ -20,7 +20,7 @@ class ProfileCardWidget extends StatelessWidget {
               child: Image(
                 fit: BoxFit.cover,
                 image: AssetImage(
-                  'assets/images/man2.jpg',
+                  'assets/images/man.jpg',
                 ),
                 width: 150,
                 height: 150,
