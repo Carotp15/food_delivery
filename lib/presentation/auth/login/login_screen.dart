@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/utils/responsive.dart';
 import 'package:go_router/go_router.dart';
-import '../../../components/background.dart';
-import 'components/login_form.dart';
-import 'components/login_screen_top_image.dart';
+import '../components/background.dart';
+import 'widgets/login_form.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +24,6 @@ class LoginScreen extends StatelessWidget {
             mobile: MobileLoginScreen(),
             desktop: Row(
               children: [
-                Expanded(
-                  child: LoginScreenTopImage(),
-                ),
                 Expanded(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -50,15 +46,14 @@ class LoginScreen extends StatelessWidget {
 
 class MobileLoginScreen extends StatelessWidget {
   const MobileLoginScreen({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        LoginScreenTopImage(),
         Row(
           children: [
             Spacer(),

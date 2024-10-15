@@ -1,32 +1,48 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery/components/already_have_an_account_acheck.dart';
+import 'package:food_delivery/presentation/auth/components/already_have_an_account_acheck.dart';
 import 'package:food_delivery/presentation/auth/login/login_screen.dart';
 import 'package:food_delivery/constants/constants.dart';
+import 'package:food_delivery/utils/style.dart';
+import 'package:food_delivery/utils/text_styles.dart';
 
 
 class SignUpForm extends StatelessWidget {
   const SignUpForm({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Form(
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(
         children: [
-          TextFormField(
-            keyboardType: TextInputType.emailAddress,
-            textInputAction: TextInputAction.next,
-            cursorColor: kPrimaryColor,
-            onSaved: (email) {},
-            decoration: const InputDecoration(
-              hintText: "Your email",
-              prefixIcon: Padding(
-                padding: EdgeInsets.all(defaultPadding),
-                child: Icon(Icons.person),
-              ),
+          Text(
+            "Thank you for joining!".toUpperCase(),
+            style: AppTextStyles.normalDGrey.copyWith(
+              fontSize: 24,
             ),
+            textAlign: TextAlign.center,
           ),
+          const SizedBox(height: defaultPadding),
+          Form(
+            child: Column(
+              children: [
+                TextFormField(
+                  keyboardType: TextInputType.emailAddress,
+                  textInputAction: TextInputAction.next,
+                  cursorColor: kPrimaryColor,
+                  onSaved: (email) {},
+                  decoration: const InputDecoration(
+                    hintText: "Your email",
+                    hintStyle: AppTextStyles.mediumGrey,
+                    prefixIcon: Padding(
+                      padding: EdgeInsets.all(defaultPadding),
+                      child: Icon(CupertinoIcons.person_fill),
+                    ),
+                  ),
+                ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
@@ -35,9 +51,10 @@ class SignUpForm extends StatelessWidget {
               cursorColor: kPrimaryColor,
               decoration: const InputDecoration(
                 hintText: "Your password",
+                hintStyle: AppTextStyles.mediumGrey,
                 prefixIcon: Padding(
                   padding: EdgeInsets.all(defaultPadding),
-                  child: Icon(Icons.lock),
+                  child: Icon(CupertinoIcons.lock_fill),
                 ),
               ),
             ),
@@ -45,6 +62,7 @@ class SignUpForm extends StatelessWidget {
           const SizedBox(height: defaultPadding / 2),
           ElevatedButton(
             onPressed: () {},
+            style: (AppStyle.secondaryButton),
             child: Text("Sign Up".toUpperCase()),
           ),
           const SizedBox(height: defaultPadding),
@@ -63,6 +81,8 @@ class SignUpForm extends StatelessWidget {
           ),
         ],
       ),
-    );
+    )
+        ]
+      ));
   }
 }

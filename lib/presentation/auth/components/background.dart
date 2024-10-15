@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
 class Background extends StatelessWidget {
   final Widget child;
   const Background({
-    Key? key,
+    super.key,
     required this.child,
-    this.topImage = "assets/images/main_top.png",
-    this.bottomImage = "assets/images/login_bottom.png",
-  }) : super(key: key);
+    this.topImage = "assets/images/12.png",
+  });
 
-  final String topImage, bottomImage;
+  final String topImage;
 
   @override
   Widget build(BuildContext context) {
@@ -21,19 +20,12 @@ class Background extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: <Widget>[
-            Positioned(
-              top: 0,
-              left: 0,
+            SizedBox.expand(
               child: Image.asset(
                 topImage,
-                width: 120,
+                fit: BoxFit.cover,
               ),
             ),
-            // Positioned(
-            //   bottom: 0,
-            //   right: 0,
-            //   child: Image.asset(bottomImage, width: 120),
-            // ),
             SafeArea(child: child),
           ],
         ),
