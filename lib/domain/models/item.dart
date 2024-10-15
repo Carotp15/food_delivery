@@ -90,7 +90,7 @@ List<ItemModel> itemsList = [
       price: '11.00',
       description: 'This fruit plate makes a fantastic casual, easy dessert and works for almost all diets.',
       liked: true,
-      category: ['dessert']),
+      category: ['salad']),
   
   ItemModel(
       id: UniqueKey().toString(),
@@ -170,7 +170,7 @@ List<ItemModel> itemsList = [
       price: '13.80',
       description: 'This fruit plate makes a fantastic casual, easy dessert and works for almost all diets.',
       liked: true,
-      category: ['dessert']),
+      category: ['salad']),
   
   ItemModel(
       id: UniqueKey().toString(),
@@ -200,7 +200,7 @@ List<ItemModel> itemsList = [
       price: '12.00',
       description: 'This chicken soup is jam-packed with a ton of nutrient-dense vegetables such as carrots, parsnips, leek, celery, and onion, plus fresh herbs.',
       liked: true,
-      category: ["food"]),
+      category: ["soup"]),
   
   ItemModel(
       id: UniqueKey().toString(),
@@ -210,7 +210,7 @@ List<ItemModel> itemsList = [
       description: 'This beef stir fry is the perfect dish filled with tender beef, lots of veggies, and an easy flavorful sauce.',
       price: '23.00',
       liked: false,
-      category: ["food"]),
+      category: ["main course"]),
   
   ItemModel(
       id: UniqueKey().toString(),
@@ -220,7 +220,7 @@ List<ItemModel> itemsList = [
       price: '19.00',
       description: 'Spaghetti alla puttanesca is a tasty first course made with tomato, olives, anchovies, and capers.',
       liked: false,
-      category: ["food"]),
+      category: ["main course"]),
   
   ItemModel(
       id: UniqueKey().toString(),
@@ -230,7 +230,7 @@ List<ItemModel> itemsList = [
       price: '19.00',
       description: 'This is a Fried Chicken with the most insanely crispy, thick craggy crust seasoned with a rich spice mix!.',
       liked: true,
-      category: ["food"]),
+      category: ["main course"]),
   
   ItemModel(
       id: UniqueKey().toString(),
@@ -240,7 +240,7 @@ List<ItemModel> itemsList = [
       price: '19.00',
       description: 'Shopska salad is a Bulgarian side dish with roasted red peppers, cucumbers and tomatoes. Its nutritious, flavorful, and weeknight-friendly.',
       liked: false,
-      category: ["food"]),
+      category: ["salad"]),
   
   ItemModel(
       id: UniqueKey().toString(),
@@ -250,5 +250,55 @@ List<ItemModel> itemsList = [
       price: '19.00',
       description: 'The sweetness of orange marmalade meshes with the salty taste of soy sauce for this delectable glazed salmon creation..',
       liked: true,
-      category: ["food", "seafood"]),
+      category: ["main course", "seafood"]),
+
+  ItemModel(
+      id: UniqueKey().toString(),
+      quantity: 1,
+      img: 'assets/images/seafood/13.png',
+      name: 'Maki Roll with Salmon and Caviar',
+      price: '40.00',
+      description: 'Satisfy your sushi cravings with these Salmon Rolls.',
+      liked: true,
+      category: ["main course", "seafood"]),
+
+  ItemModel(
+      id: UniqueKey().toString(),
+      quantity: 1,
+      img: 'assets/images/seafood/14.png',
+      name: 'Salmon Nigiri',
+      price: '25.00',
+      description: 'Salmon nigiri with soy sauce.',
+      liked: true,
+      category: ["main course", "seafood"]),
+
+  ItemModel(
+      id: UniqueKey().toString(),
+      quantity: 1,
+      img: 'assets/images/food/15.png',
+      name: 'Lentil Soup',
+      price: '12.00',
+      description: 'This lentil soup is hearty, healthy, and loaded with fire-roasted tomatoes, easy vegetables, and delicious Mediterranean flavors!',
+      liked: true,
+      category: ["soup"]),
+
+  ItemModel(
+      id: UniqueKey().toString(),
+      quantity: 1,
+      img: 'assets/images/food/16.png',
+      name: 'Pumpkin Soup',
+      price: '13.00',
+      description: 'Thick, creamy and dreamy, with sweet pumpkin flavour and great savoury undertones!',
+      liked: true,
+      category: ["soup"]),
+  
+  ItemModel(
+      id: UniqueKey().toString(),
+      quantity: 1,
+      img: 'assets/images/food/17.png',
+      name: 'Tomato Soup',
+      price: '13.00',
+      description: 'Creamy, comforting, and full of rich flavor. Delicious with a grilled cheese sandwich!',
+      liked: true,
+      category: ["soup"]),
 ];

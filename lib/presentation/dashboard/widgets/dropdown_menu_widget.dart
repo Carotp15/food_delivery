@@ -11,29 +11,18 @@ class CustomDropdownWidget extends StatelessWidget {
     return PopupMenuButton<String>(
       onSelected: (String value) {
         switch (value) {
-          case 'Login':
+          case 'Logout':
             context.go('/login');
-            break;
-          case 'Register':
-            context.go('/register');
             break;
         }
       },
       itemBuilder: (BuildContext context) {
         return [
           const PopupMenuItem<String>(
-            value: 'Login',
-            child: Text('Login',
+            value: 'Logout',
+            child: Text('Logout',
             textAlign: TextAlign.center,
             style: AppTextStyles.mediumDarkGrey,
-            ),
-          ),
-          const PopupMenuItem<String>(
-            value: 'Register',
-            child: Text('Register',
-            textAlign: TextAlign.center,
-            style: AppTextStyles.mediumDarkGrey,
-
             ),
           ),
         ];

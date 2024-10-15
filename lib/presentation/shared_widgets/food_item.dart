@@ -54,10 +54,9 @@ class _FoodItemState extends State<FoodItem>
     var size = MediaQuery.of(context).size;
     return InkWell(
       onTap: () {
-        // Use GoRouter for navigation
         context.push(
-          '/product/${widget.item.id}', // Define the path and item ID
-          extra: widget.item, // Pass the item as extra
+          '/product/${widget.item.id}', 
+          extra: widget.item, 
         );
       },
       child: Stack(

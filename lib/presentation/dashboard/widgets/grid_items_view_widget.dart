@@ -18,7 +18,7 @@ class ItemsGridWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: (MediaQuery.of(context).size.height * 0.5) + (MediaQuery.of(context).size.width * 0.2),
+      height: (MediaQuery.of(context).size.height * 0.5) + (MediaQuery.of(context).size.width * 0.15),
       child: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,

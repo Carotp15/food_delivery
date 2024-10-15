@@ -11,11 +11,11 @@ class GetStartedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        context.go('/home/0');
+        context.go('/login');
       },
       style: (AppStyle.secondaryButton),
       child: const Text(
-        'Get started',
+        'Get Started',
       ),
     );
   }

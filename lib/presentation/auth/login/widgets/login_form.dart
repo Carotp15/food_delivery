@@ -5,6 +5,7 @@ import 'package:food_delivery/constants/constants.dart';
 import 'package:food_delivery/presentation/auth/register/register_screen.dart';
 import 'package:food_delivery/utils/style.dart';
 import 'package:food_delivery/utils/text_styles.dart';
+import 'package:go_router/go_router.dart';
 
 
 class LoginForm extends StatelessWidget {
@@ -61,7 +62,9 @@ class LoginForm extends StatelessWidget {
                 ),
                 const SizedBox(height: defaultPadding),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                  context.go('/home/0');
+                  },
                   style: (AppStyle.secondaryButton),
                   child: Text(
                     "Login".toUpperCase(),

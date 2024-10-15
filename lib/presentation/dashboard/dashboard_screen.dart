@@ -16,7 +16,7 @@ class DashboardScreen extends ConsumerStatefulWidget {
 }
 
 class _DashboardScreenState extends ConsumerState<DashboardScreen> {
-  final List<String> categories = ["All", "Dessert", "Food", "Seafood"]; 
+  final List<String> categories = ["All", "Dessert", "Main Course", "Salad", "Soup", "Seafood"]; 
   int selectedCategoryIndex = 0; 
 
   List<ItemModel> items = []; 
