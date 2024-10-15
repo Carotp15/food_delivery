@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:food_delivery/domain/models/item.dart';
+import 'package:food_delivery/presentation/auth/login/login_screen.dart';
+import 'package:food_delivery/presentation/auth/register/register_screen.dart';
 import 'package:food_delivery/presentation/product/product_detail_screen.dart';
 import 'package:food_delivery/providers/cart_provider.dart';
 import 'package:go_router/go_router.dart';
@@ -55,10 +57,10 @@ final router = GoRouter(
       builder: (context, state) => const LoginScreen(),
     ),
     GoRoute(
-        name: 'register',
-        path: '/register',
-        builder: (context, state) => const RegisterScreen(),
-        widget),
+      name: 'register',
+      path: '/register',
+      builder: (context, state) => const SignUpScreen(),
+    ),
     GoRoute(path: '/', redirect: (_, __) => '/home/0'),
   ],
 );

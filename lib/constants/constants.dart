@@ -16,3 +16,8 @@ void customSnackBar(String title, String msg) {
           style: AppTextStyles.normalGrey,
           ));
 }
+
+const kPrimaryColor = Color(0xFF6F35A5);
+const kPrimaryLightColor = Color(0xFFF1E6FF);
+
+const double defaultPadding = 16.0;
