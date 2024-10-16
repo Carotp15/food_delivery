@@ -44,12 +44,17 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
   }
 
   void _onSearch(String value) {
-    setState(() {
-      filteredItems = items
-          .where((item) => item.name.toLowerCase().contains(value.toLowerCase()))
-          .toList();
-    });
-  }
+  setState(() {
+    filteredItems = items.where((item) {
+      final matchesSearch = item.name.toLowerCase().contains(value.toLowerCase());
+      final matchesCategory = categories[selectedCategoryIndex].toUpperCase() == "ALL" ||
+          item.category
+              .map((cat) => cat.toUpperCase())
+              .contains(categories[selectedCategoryIndex].toUpperCase());
+      return matchesSearch && matchesCategory;
+    }).toList();
+  });
+}
 
   @override
   Widget build(BuildContext context) {

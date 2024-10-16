@@ -21,7 +21,7 @@ class HeaderWidget extends StatelessWidget {
                 padding: EdgeInsets.only(left: AppDimens.bodyMarginMedium),
                 child: const Center(
                   child: Text(
-                  'Fast Delivery of Delicious Food',
+                  'Grattu: Brunch & Desserts',
                   maxLines: 2,
                   style: AppTextStyles.largeWhite
                   ),
